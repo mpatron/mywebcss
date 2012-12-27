@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:ui="http://java.sun.com/jsf/facelets">
+<head>
+<title>Les cadres CSS, version 2: Exemple 1, pleine largeur | 456 Berea Street</title>
+
+<style type="text/css" media="screen,print">
+html,body {
+	margin: 0;
+	padding: 0;
+	height: 100%;
+}
+
+html>body #wrap {
+	height: 100%;
+}
+
+#header {
+	width: 100%;
+	height: 5em;
+}
+
+html>body #header {
+	position: fixed;
+	z-index: 10;
+}
+
+html>body #content-wrap {
+	height: 100%;
+}
+
+html>body #content {
+	padding: 6em 1em;
+}
+
+#footer {
+	width: 100%;
+	height: 5em;
+}
+
+html>body #footer {
+	position: fixed;
+	bottom: 0;
+	z-index: 10;
+}
+
+html,body {
+	color: #333;
+	background: #fff url('bg.gif') fixed;
+}
+
+body {
+	font: 76%/1.5 "Lucida Grande", "Lucida Sans Unicode", Arial, Helvetica,
+		sans-serif;
+}
+
+h1,h2 {
+	margin: 0.25em 0;
+	font: normal 1.5em/1.1 "Century Gothic", "Trebuchet MS", Helvetica,
+		Arial, Geneva, sans-serif;
+	text-align: center;
+	letter-spacing: 1px;
+}
+
+p {
+	margin: 1em 0;
+}
+
+.info {
+	position: relative;
+	width: 40em;
+	margin: 0 auto;
+	padding: 0.5em;
+	border: 2px solid #999;
+	background: #fff;
+}
+
+a:link,a:visited {
+	border-bottom: 1px dotted;
+	color: #AE4F0C;
+	font-weight: bold;
+	text-decoration: none;
+}
+
+a:focus,a:hover {
+	border-bottom-style: solid;
+	color: #D03900;
+}
+
+#header,#footer {
+	color: #111;
+	background: #ddd;
+	text-align: center;
+}
+
+#content-wrap,#content {
+	background: #f8f8f3 url('demo.gif');
+}
+
+#footer a {
+	color: #111;
+}
+</style>
+<!--[if lt IE 7]>
+	<link rel="stylesheet" href="ie.css" type="text/css">
+<![endif]-->
+</head>
+<body>
+	<div id="wrap">
+		<div id="header">
+			<h1>Les cadres CSS, version 2</h1>
+			<h2>Exemple 1, pleine largeur</h2>
+		</div>
+		<div id="content-wrap">
+			<div id="content">
+				<p class="info">
+					Cette page met en application la technique décrite dans l'article <a
+						href="http://www.456bereastreet.com/archive/200609/css_frames_v2_fullheight/">CSS
+						Frames v2, full-height</a>. Lisez cet article pour plus d'informations
+					sur le fonctionnement de cette technique.
+				</p>
+				<form action="#">
+					<div>
+						<select>
+							<option>Option 1</option>
+							<option>Option 2</option>
+						</select>
+					</div>
+				</form>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed
+					do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+					enim ad minim veniam, quis nostrud exercitation ullamco laboris
+					nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+					reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+					pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+					culpa qui officia deserunt mollit anim id est laborum.</p>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed
+					do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+					enim ad minim veniam, quis nostrud exercitation ullamco laboris
+					nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+					reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+					pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+					culpa qui officia deserunt mollit anim id est laborum.</p>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed
+					do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+					enim ad minim veniam, quis nostrud exercitation ullamco laboris
+					nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+					reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+					pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+					culpa qui officia deserunt mollit anim id est laborum.</p>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed
+					do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+					enim ad minim veniam, quis nostrud exercitation ullamco laboris
+					nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+					reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+					pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+					culpa qui officia deserunt mollit anim id est laborum.</p>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed
+					do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+					enim ad minim veniam, quis nostrud exercitation ullamco laboris
+					nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+					reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+					pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+					culpa qui officia deserunt mollit anim id est laborum.</p>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed
+					do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+					enim ad minim veniam, quis nostrud exercitation ullamco laboris
+					nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+					reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+					pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+					culpa qui officia deserunt mollit anim id est laborum.</p>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed
+					do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+					enim ad minim veniam, quis nostrud exercitation ullamco laboris
+					nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+					reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+					pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+					culpa qui officia deserunt mollit anim id est laborum.</p>
+				<p>C'est la dernière ligne.</p>
+			</div>
+		</div>
+		<div id="footer">
+			<div id="labfooter">
+				<p>
+					<a href="http://www.456bereastreet.com/lab/">Lab Index</a> | <a
+						href="http://www.456bereastreet.com/">456 Berea Street Home</a> |
+					Copyright © 2003-2008 Roger Johansson
+				</p>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

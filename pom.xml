@@ -1,0 +1,98 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>org.jobjects</groupId>
+  <artifactId>mywebcss</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  
+  	<url>http://www.jobjects.org</url>
+	<developers>
+		<developer>
+			<id>mpatron</id>
+			<name>Mickaël Patron</name>
+			<email>mickael_patron@hotmail.com</email>
+			<roles>
+				<role>Lead Developer</role>
+			</roles>
+			<timezone>5</timezone>
+		</developer>
+	</developers>
+	<organization>
+		<name>Mickaël Patron</name>
+		<url>http://www.jobjects.org</url>
+	</organization>
+
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<compileSource>1.6</compileSource>
+		<endorsed.dir>${project.build.directory}/endorsed</endorsed.dir>
+	    <!-- <persistence.persistence-unit.provider>org.hibernate.ejb.HibernatePersistence</persistence.persistence-unit.provider>  -->
+	    <persistence.persistence-unit.provider>org.eclipse.persistence.jpa.PersistenceProvider</persistence.persistence-unit.provider>
+		<!-- https://community.jboss.org/wiki/HowToAddRichFaces4xToMavenBasedProject -->
+        <org.richfaces.bom.version>4.2.0.Final</org.richfaces.bom.version>
+	</properties>
+
+
+
+	<build>
+		<plugins>
+		
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>2.3.2</version>
+				<configuration>
+					<source>${compileSource}</source>
+					<target>${compileSource}</target>
+					<compilerArguments>
+						<endorseddirs>${endorsed.dir}</endorseddirs>
+					</compilerArguments>
+				</configuration>
+			</plugin>
+		
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-war-plugin</artifactId>
+				<version>2.1.1</version>
+				<configuration>
+					<failOnMissingWebXml>false</failOnMissingWebXml>
+					<!-- 
+					<archive>
+             			<manifest>
+	              			<addClasspath>true</addClasspath>
+	           			</manifest>
+			            <manifestEntries>
+			              <Class-Path>my-jee6-ejb-1.0.jar</Class-Path>
+			            </manifestEntries>
+           			</archive>
+           			 -->					
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+	
+	<dependencies>
+			
+		<!-- RichFaces libraries -->
+		<dependency>
+			<groupId>org.richfaces.ui</groupId>
+			<artifactId>richfaces-components-ui</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.richfaces.core</groupId>
+			<artifactId>richfaces-core-impl</artifactId>
+		</dependency>
+		
+	</dependencies>
+	
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>org.richfaces</groupId>
+                <artifactId>richfaces-bom</artifactId>
+                <version>${org.richfaces.bom.version}</version>
+                <scope>import</scope>
+                <type>pom</type>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>	
+</project>
