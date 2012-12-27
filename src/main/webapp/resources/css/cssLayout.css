@@ -39,10 +39,10 @@ html>body #footer {
 
 #left {
     float: left;
-    /*background-color: #ece3a5;*/
-    background: #f8f8f3
-    padding: 5px;
-    width: 150px;
+    width: 5em;
+    padding: 8em;
+    background: #A8A8A8;
+    height: 100%;	
 }
 
 html,body {
