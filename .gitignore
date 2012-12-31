@@ -1,15 +1,24 @@
+# Compiled source #
+###################
 *.class
 
 # Package Files #
+######################
 *.jar
 *.war
 *.ear
 
-# Eclipse
+# Eclipse #
+######################
 .classpath
 .project
 .settings
 .metadata
 
-# Maven 
+# Maven #
+######################
 target
+
+# OS generated files #
+######################
+Thumbs.db

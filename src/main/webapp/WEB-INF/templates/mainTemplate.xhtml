@@ -1,44 +1,47 @@
-<?xml version='1.0' encoding='UTF-8' ?> 
+<?xml version='1.0' encoding='UTF-8' ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml"
-      xmlns:ui="http://java.sun.com/jsf/facelets"
-      xmlns:h="http://java.sun.com/jsf/html"
-      xmlns:c="http://java.sun.com/jsf/core">
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:c="http://java.sun.com/jsf/core">
 
-    <h:head>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-        <meta http-equiv="Refresh" content="#{session.maxInactiveInterval};url=index.xhtml?reason=expired" />        
-        <title><h:outputText value="#{msg['title']}" /></title>
-		<h:outputStylesheet library="css" name="cssLayout.css" />
-    </h:head>
-    
-    <h:body>
-        
+<h:head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta http-equiv="Refresh"
+		content="#{session.maxInactiveInterval};url=index.xhtml?reason=expired" />
+	<title><h:outputText value="#{msg['title']}" /></title>
+	<h:outputStylesheet library="css" name="cssLayout.css" />
+</h:head>
+
+<h:body>
+
 	<div id="wrap">
-		<div id="header">mkyong
-        	<h:outputText value="Your session has been expired" rendered="#{param.reason == 'expired'}" />        	
-            <ui:insert name="top">Top</ui:insert>
+		<div id="header">
+			mkyong
+			<h:outputText value="Your session has been expired"
+				rendered="#{param.reason == 'expired'}" />
+			<ui:insert name="top">Top</ui:insert>
 		</div>
 		<div id="content-wrap">
-            <div id="left">
-                <ui:insert name="left">Left</ui:insert>
-            </div>
 			<div id="content">
-                    <ui:insert name="content">Content</ui:insert>
+				<div id="left">
+					<ui:insert name="left">Left</ui:insert>
+				</div>
+				<div id="centre">
+					<ui:insert name="content">Content</ui:insert>
+				</div>				
 			</div>
 		</div>
 		<div id="footer">
 			<div id="labfooter">
 				<p>
-	            <ui:insert name="bottom">Bottom</ui:insert>
-	            </p>
-				<p>
-					Copyright © 20012-2013 Mickaël Patron
+					<ui:insert name="bottom">Bottom</ui:insert>
 				</p>
+				<p>Copyright © 20012-2013 Mickaël Patron</p>
 			</div>
 		</div>
 	</div>
-        
-    </h:body>
-    
+
+</h:body>
+
 </html>

@@ -37,12 +37,16 @@ html>body #footer {
 	z-index: 10;
 }
 
+
 #left {
     float: left;
     width: 5em;
-    padding: 8em;
+    padding: 1em;
     background: #A8A8A8;
     height: 100%;	
+}
+#centre {
+	
 }
 
 html,body {

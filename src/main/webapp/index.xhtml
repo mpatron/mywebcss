@@ -8,19 +8,20 @@
 	<ui:composition template="./WEB-INF/templates/mainTemplate.xhtml">
 		<ui:define name="top">top1</ui:define>
 		<ui:define name="left">
-		<f:view>
-		<p>left11S</p>
-		</f:view>
+			<f:view>
+				<p>left11S</p>
+				<p>left22</p>
+			</f:view>
 		</ui:define>
 		<ui:define name="right">right</ui:define>
 		<ui:define name="content">
 			<f:view>
-	coucou
-	<h:link id="standard" value="standard"
+				<p>coucou</p>
+				<h:link id="standard" value="standard"
 					outcome="/standard?faces-redirect=true" />
 			</f:view>
 		</ui:define>
-		
+
 	</ui:composition>
 </h:body>
 </html>
